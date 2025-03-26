@@ -20,5 +20,3 @@ Testimonials
 Join Us/Register
 FAQs
 
-
->>>>>>> d7ac4d390b72c94050d801e75c10fe87327f0287
