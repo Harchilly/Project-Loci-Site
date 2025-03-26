@@ -219,3 +219,56 @@
     display: none;
   }
 }
+
+/* FAQ Section */
+#faq {
+    padding: 2em 1em;
+    background-color: #f9f9f9;
+}
+
+#faq h2 {
+    text-align: center;
+    margin-bottom: 1.5em;
+    font-size: 2em;
+    color: #333;
+}
+
+#faq h3 {
+    margin-top: 2em;
+    font-size: 1.5em;
+    color: #444;
+}
+
+.faq-item {
+    margin-bottom: 1em;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 1em;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #f0f0f0;
+}
+
+.faq-answer {
+    display: none;
+    padding: 1em;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-top: none;
+    font-size: 0.95em;
+    color: #555;
+}
+
+/* Show answer when active */
+.faq-item.active .faq-answer {
+    display: block;
+}

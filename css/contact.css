@@ -20,7 +20,7 @@
     font-weight: 900;
     font-size: min(9vw, 2.4em);
     line-height: 1.20833333;
-    color: #1A1A1A;
+    color: #1a1a1a;
     position: relative;
     margin-bottom: 0.875em;
     text-align: left;
@@ -94,7 +94,7 @@
     border: none;
   }
   #form .contact-right {
-    background: #1a1a1a;
+    background: var(--primary); /* Changed from #1a1a1a to use primary purple color */
     padding: 2.8125em 2.125em;
     width: 100%;
     max-width: 18.75em;
@@ -107,7 +107,7 @@
     line-height: 1.2em;
     font-weight: bold;
     padding-left: 0.83333333em;
-    border-left: 0.20833333em solid var(--primary);
+    border-left: 0.20833333em solid #fff; /* Changed from var(--primary) to white */
     display: block;
     margin-bottom: 0.83333333em;
   }
@@ -288,6 +288,46 @@
     color: #fff;
   }
   body.dark-mode #form .contact-right {
-    background: var(--medium);
+    background: var(--primary); /* Ensure same color in dark mode */
   }
+  body.dark-mode #form .contact-right .heading {
+    border-left: 0.20833333em solid #fff;
+  }
+}
+
+/* Style for the Submit button */
+#form #contact .button-solid {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: var(--primary);
+    border-radius: 8px;
+    padding: 12px 24px;
+    text-decoration: none;
+    border: none;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#form #contact .button-solid:hover {
+    background-color: var(--primaryShade);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Remove any unwanted spacing or decorative elements */
+#form #contact .button-solid:before,
+#form #contact .button-solid:after {
+    display: none !important;
+}
+
+/* Adjust the form submit button container */
+#form #contact .form-submit {
+    margin: 0;
+    padding: 0;
+    border: none;
 }

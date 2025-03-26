@@ -9,7 +9,7 @@
     --accent: #334756;
   }
   body.dark-mode {
-    background-color: var(--dark);
+    background-color: #373752;
   }
   body.dark-mode p,
   body.dark-mode li,
@@ -26,6 +26,15 @@
   }
   body.dark-mode .dark {
     display: block !important;
+  }
+  body.dark-mode #footer {
+    background-color: #373752;
+  }
+  body.dark-mode #cta {
+    background-color: #373752;
+  }
+  body.dark-mode #sidebyside {
+    background-color: #373752;
   }
   .dark {
     display: none;
@@ -92,4 +101,22 @@
   #dark-mode-toggle .moon {
     fill: #fff;
   }
+}
+
+/* Dark mode header styles */
+body.dark-mode #navigation {
+    background-color: var(--primary); /* Set the header background to purple */
+    color: #fff; /* Ensure text in the header is white */
+}
+
+body.dark-mode #navigation #navbar-menu ul li a {
+    color: #fff !important; /* Ensure navigation links are white */
+}
+
+body.dark-mode #navigation .logo img {
+    filter: brightness(0) invert(1); /* Optional: Adjust logo for better visibility */
+}
+
+body.dark-mode #navigation #navbar-menu ul li a:hover {
+    color: var(--primaryShade); /* Optional: Add hover effect with a lighter purple */
 }

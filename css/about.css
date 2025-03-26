@@ -112,29 +112,90 @@
 /* Small Desktop */
 @media only screen and (min-width: 1300px) {
   #sidebyside {
-    padding: 9.375em 0;
+    padding: 6em 0; /* Reduced padding */
   }
   #sidebyside .container {
     max-width: 86.9375em;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 4em;
   }
   #sidebyside .content {
     margin: 0;
     width: 60%;
+    order: 1;
   }
   #sidebyside .image-box {
     margin: 0;
-    margin-right: 10.625em;
+    width: 35%;
+    height: auto;
+    position: relative;
+    order: 2;
+    display: block; /* Ensure image box is visible */
   }
+  #sidebyside .image-box:before,
+  #sidebyside .image-box:after {
+    display: none; /* Remove decorative elements */
+  }
+  #sidebyside .image-box img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* Control maximum height */
+    object-fit: cover;
+    border-radius: 8px;
+  }
+}
+/* Adjust mobile view if needed */
+@media only screen and (max-width: 1299px) {
+  #sidebyside .image-box {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    margin: 2em auto;
+    display: block;
+  }
+  #sidebyside .image-box img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+  }
+}
+/* Style for the "Contact us for more Information" button */
+#sidebyside .button-solid {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: var(--primary);
+    border-radius: 8px;
+    padding: 12px 24px;
+    text-decoration: none;
+    border: none;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#sidebyside .button-solid:hover {
+    background-color: var(--primaryShade);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Remove ALL possible spacing issues */
+#sidebyside .button-solid:before,
+#sidebyside .button-solid:after,
+#sidebyside .button-solid *:before,
+#sidebyside .button-solid *:after {
+    display: none !important;
 }
 /*-- -------------------------- -->
 <---    Final Call To Action    -->

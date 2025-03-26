@@ -242,6 +242,8 @@
   #cta {
     position: relative;
     padding: 3.125em 0;
+    background: url('/images/Lbackground.jpg') no-repeat center center;
+    background-size: cover;
   }
   #cta:before {
     content: '';
@@ -259,12 +261,7 @@
     text-align: center;
   }
   #cta picture {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -2;
+    display: none;
   }
   #cta picture img {
     position: absolute;
@@ -352,3 +349,144 @@
     display: none;
   }
 }
+#cta .title,
+#cta p {
+    color: #000; /* Change text color to black */
+}
+
+/* Change text color for buttons and add rounded corners */
+.button-solid {
+    color: #fff; /* Set text color to white */
+    border-radius: 8px; /* Add rounded corners */
+}
+
+/* Update the sidebyside section styles */
+@media only screen and (min-width: 1024px) {
+    #sidebyside .container,
+    #sidebyside-reverse .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 4em;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2em;
+    }
+
+    #sidebyside .content,
+    #sidebyside-reverse .content {
+        flex: 1;
+        order: 1;
+        margin: 0;
+        max-width: 50%;
+    }
+
+    #sidebyside .image-box,
+    #sidebyside-reverse .image-box {
+        flex: 1;
+        order: 2;
+        margin: 0;
+        max-width: 45%;
+        height: auto;
+        position: relative;
+    }
+
+    #sidebyside .image-box img,
+    #sidebyside-reverse .image-box img {
+        width: 100%;
+        height: auto;
+        position: relative;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    /* Remove the before/after decorative elements */
+    #sidebyside .image-box:before,
+    #sidebyside .image-box:after,
+    #sidebyside-reverse .image-box:before,
+    #sidebyside-reverse .image-box:after {
+        display: none;
+    }
+
+    /* Reverse order for alternate sections */
+    #sidebyside-reverse .container {
+        flex-direction: row-reverse;
+    }
+}
+
+/* Mobile styles remain unchanged */
+@media only screen and (max-width: 1023px) {
+    #sidebyside .container,
+    #sidebyside-reverse .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2em;
+    }
+
+    #sidebyside .content,
+    #sidebyside-reverse .content {
+        order: 2;
+        width: 100%;
+        margin-top: 2em;
+    }
+
+    #sidebyside .image-box,
+    #sidebyside-reverse .image-box {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        margin: 0;
+    }
+}
+
+/* Specific styles for About page sidebyside section */
+@media only screen and (min-width: 1024px) {
+    /* Reset the default image box styles for about page */
+    body.about #sidebyside .image-box {
+        width: 40%;
+        height: auto;
+        position: relative;
+        margin: 0;
+    }
+
+    body.about #sidebyside .image-box img {
+        position: relative;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px;
+        top: auto;
+        left: auto;
+    }
+
+    /* Remove decorative elements on about page */
+    body.about #sidebyside .image-box:before,
+    body.about #sidebyside .image-box:after {
+        display: none;
+    }
+
+    /* Adjust content width for about page */
+    body.about #sidebyside .content {
+        width: 55%;
+        margin: 0;
+    }
+}
+
+/* Mobile styles for about page */
+@media only screen and (max-width: 1023px) {
+    body.about #sidebyside .image-box {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        margin: 2em 0;
+    }
+
+    body.about #sidebyside .image-box img {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+}
+
