@@ -114,7 +114,8 @@
                 <h2 class="title">Send a Message</h2>
                 <p>Whether you're a student looking for tutoring or a parent interested in how Project Loci works, we're here to help!</p>
                 <p>If you have any questions or concerns please feel free to reach out to us.</p>
-                <form id="contact" name="Contact Form2" method="post" data-netlify="true">
+                <form id="contact" name="contact" method="POST" data-netlify="true">
+                    <input type="hidden" name="form-name" value="contact">                  
                         <div class="input-group">
                             <label for="name">Full Name</label>
                             <input id="name" aria-label="name" class="input1" name="name" placeholder="Full Name" type="text" tabindex="1" required>
@@ -200,7 +201,7 @@
                     </ul>
                     <ul>
                         <li><h2>Contact</h2></li>
-                        <li><a href="tel:555-779-4407">T: (555) 779-4407</a></li>
+                        <li><a href="tel:555-779-4407">T: (647) 917-9237</a></li>
                         <li><a href="mailto:email@email.com">projectloci1@gmail.com</li>
                     </ul>
                 </div>
