@@ -490,3 +490,43 @@
     }
 }
 
+/* Navigation link underline styles */
+#navigation #navbar-menu ul li a {
+    position: relative;
+    color: #1a1a1a; /* Ensure text color is consistent */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+#navigation #navbar-menu ul li a:before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 2px; /* Keep the underline thin */
+    width: 0%;
+    background: var(--primary); /* Use the purple accent color */
+    bottom: -4px; /* Adjust spacing between text and underline */
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+#navigation #navbar-menu ul li a:hover:before,
+#navigation #navbar-menu ul li a.active:before {
+    width: 100%; /* Expand underline on hover or active state */
+}
+
+/* Mobile-specific styles */
+@media only screen and (max-width: 1023px) {
+    #navigation #navbar-menu ul li a {
+        font-size: 0.9em; /* Adjust font size for mobile */
+    }
+
+    #navigation #navbar-menu ul li a:before {
+        height: 2px; /* Ensure underline remains thin on mobile */
+        bottom: -4px; /* Maintain consistent spacing */
+    }
+}
+

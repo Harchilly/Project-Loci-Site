@@ -11,6 +11,8 @@
     z-index: 1;
     background: url('/images/plbg1.jpg') no-repeat center center;
     background-size: cover;
+    background-attachment: scroll; /* Ensure consistent behavior */
+    min-height: 100vh;
   }
   #hero:before {
     content: '';
@@ -130,6 +132,29 @@
   }
   #hero picture {
     display: none;
+  }
+}
+/* Hide picture element for larger screens */
+@media only screen and (min-width: 768px) {
+  #hero picture {
+    display: none;
+  }
+}
+/* Mobile-specific styles */
+@media only screen and (max-width: 767px) {
+  #hero {
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center center;
+    min-height: 50vh;
+  }
+  #hero picture {
+    display: block;
+  }
+  #hero picture img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
   }
 }
 /*-- -------------------------- -->
