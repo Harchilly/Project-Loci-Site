@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Swap our for actual link-->
+    <link rel="canonical" href="https://www.Projectloci.ca/FAQ">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!--Social Media Display-->
+    <meta property="og:title" content=""/>
+    <meta property="og:description" content=""/>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content=""/>
+    <meta property="og:image" content="/images/social.jpg"/>
+    <meta property="og:image:secure_url" content="/images/social.jpg"/>
+
+    <!--Favicons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/slogo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/slogo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/slogo.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Preload -->
+    <link rel="preload" as="image" href="/images/cabinets2-m.jpg">
+    <link rel="preload" as="image" href="/images/whitelogo.PNG">
+    <link rel="preload" as="font" type="font/woff2" href="fonts/roboto-v29-latin-regular.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="fonts/roboto-v29-latin-700.woff2" crossorigin>
+
+    <link rel="stylesheet" href="/css/root.css">
+    <link rel="stylesheet" href="/css/projects.css">
+    <link rel="stylesheet" href="/css/dark.css">
+
+    <!--Put analytics tag here at the bottom to prevent it from render blocking-->
+
+    <title>Project Loci | Projects | Ontario</title>
+</head>
+<body>
+    <!--Screen reader skip main nav-->
+    <a class="skip" aria-label="skip to main content" href="#main">Click To Skip To Main Content</a>
+
+    <!-- ============================================ -->
+    <!--                 Navigation                   -->
+    <!-- ============================================ -->
+
+    <div id="navigation">
+        <div aria-hidden="true" class="background-color-div">
+            <!--This div is used to overcome a z-index issue where the open
+                #navbar-menu is on top of the #navigation. This bar places itself 
+                the #navbar-menu so that menu appears behind the #navigation
+            -->
+        </div>
+        <div class="container">
+            <!--Logo - Get SVGs if you can.  I use fiverr to get png's turned into SVGs. Highly recommend it, worth the $20 - get a light and dark version-->
+            <a class="logo" aria-label="click to go to home page" href="/index.html">
+                <!--Light Colored Logo, remove .dark image tag and the .light class if you don't have a dark and light version -->
+                <img class="light" aria-hidden="true" src="/images/PLlogo.png" decoding="async" alt="logo" width="221" height="66">
+
+                <!--Dark Colored Logo-->
+                <img class="dark" aria-hidden="true" src="/images/PLlogo.png" decoding="async" loading="lazy" alt="logo" width="221" height="66">
+            </a>
+
+            <!--Main Nav-->
+            <nav id="navbar-menu">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a class="active" href="/faq.html">FAQ</a></li>
+                    <li><a href="/contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <!--Dark Mode toggle-->
+            <button id="dark-mode-toggle">
+                <!--Moon is an inline SVG so you can edit the color if needed-->
+                <svg class="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
+                <img class="sun" aria-hidden="true" src="/images/sun.svg" decoding="async" alt="moon" width="15" height="15">
+            </button>
+
+            <!--Mobile Nav toggle-->
+            <button class="hamburger-menu">
+                <span aria-hidden="true"></span>
+            </button>
+        </div>
+    </div>
+
+    <main id="main">
+
+        <!-- ============================================ -->
+        <!--                    LANDING                   -->
+        <!-- ============================================ -->
+    
+        <section id="int-hero">
+            <h1 id="home-h">Frequently Asked Questions (FAQ)</h1>
+            <picture>
+                <source media="(max-width: 600px)" srcset="/images/faqb.png">
+                <source media="(min-width: 601px)" srcset="/images/faqb.png">
+                <img aria-hidden="true" loading="lazy" decoding="async" src="/images/faqb.png" alt="" width="400" height="662">
+            </picture>
+        </section>
+        <!-- ============================================ -->
+        <!--                    FAQ                       -->
+        <!-- ============================================ -->
+
+        <section id="faq">
+            <div class="container">
+
+                <!-- General Information -->
+                <h3>General Information</h3>
+                <div class="faq-item">
+                    <button class="faq-question"> What is Project Loci?</button>
+                    <div class="faq-answer">
+                        <p>Project Loci is a free tutoring initiative by students from Western University, aimed at helping students in grades 6-12 excel in their studies using the Method of Loci—a scientifically proven memory technique that enhances retention and recall.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question"> What is the Method of Loci?</button>
+                    <div class="faq-answer">
+                        <p>The Method of Loci is a powerful memory technique that involves visualizing information in specific locations (like rooms in a house) to improve memory and learning. It’s an effective and fun way to retain academic concepts.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question"> Who are the tutors?</button>
+                    <div class="faq-answer">
+                        <p>Our tutors are knowledgeable university students experienced in using and teaching the Method of Loci. They are passionate about education and dedicated to helping students improve their academic skills.</p>
+                    </div>
+                </div>
+
+                <!-- Services Offered -->
+                <h3>Services Offered</h3>
+                <div class="faq-item">
+                    <button class="faq-question"> What subjects do you tutor?</button>
+                    <div class="faq-answer">
+                        <p>We provide tutoring across a diverse range of subjects, including Chemistry, Biology, History, Psychology, and other humanities disciplines.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question"> Is the tutoring service really free?</button>
+                    <div class="faq-answer">
+                        <p>Yes! Our tutoring service is 100% free. We aim to provide accessible education support to every student.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question"> How are tutoring sessions conducted?</button>
+                    <div class="faq-answer">
+                        <p>Sessions are available both online and in-person, depending on the student’s preference and availability.</p>
+                    </div>
+                </div>
+
+                <!-- Enrollment and Participation -->
+                <h3>Enrollment and Participation</h3>
+                <div class="faq-item">
+                    <button class="faq-question"> How can I register my child for tutoring?</button>
+                    <div class="faq-answer">
+                        <p>You can register through our website by filling out the registration form or contacting us directly.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question"> Are there any requirements for students to join?</button>
+                    <div class="faq-answer">
+                        <p>Students must be in grades 6-12. No prior experience with the Method of Loci is necessary.</p>
+                    </div>
+                </div>
+
+                <!-- Session Details -->
+                <h3>Session Details</h3>
+                <div class="faq-item">
+                    <button class="faq-question"> How long is each tutoring session?</button>
+                    <div class="faq-answer">
+                        <p>Session length varies based on student needs but typically lasts between 45 minutes to an hour.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question"> How often are the tutoring sessions?</button>
+                    <div class="faq-answer">
+                        <p>This depends on the student’s academic goals and availability. We recommend at least one session per week for optimal results.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question"> What should my child prepare before the session?</button>
+                    <div class="faq-answer">
+                        <p>Students should bring their study materials, any specific questions they have, and be ready to engage with the Method of Loci.</p>
+                    </div>
+                </div>
+
+                <!-- Method of Loci Focus -->
+                <h3>Method of Loci Focus</h3>
+                <div class="faq-item">
+                    <button class="faq-question"> How is the Method of Loci incorporated into tutoring?</button>
+                    <div class="faq-answer">
+                        <p>Tutors guide students in creating visual memory journeys that help encode and recall information effectively.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question"> What are the benefits of using the Method of Loci?</button>
+                    <div class="faq-answer">
+                        <p>Students improve memory retention, focus, and academic performance while developing lifelong learning techniques.</p>
+                    </div>
+                </div>
+
+                <!-- Safety and Accessibility -->
+                <h3>Safety and Accessibility</h3>
+                <div class="faq-item">
+                    <button class="faq-question"> How is student safety ensured during in-person sessions?</button>
+                    <div class="faq-answer">
+                        <p>Sessions are conducted in safe, public, and accessible community locations, and we adhere to all safety protocols.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question"> Can students with learning difficulties benefit from this method?</button>
+                    <div class="faq-answer">
+                        <p>Yes, the Method of Loci is adaptable and can benefit students with diverse learning needs.</p>
+                    </div>
+                </div>
+
+                <!-- Contact and Support -->
+                <h3>Contact and Support</h3>
+                <div class="faq-item">
+                    <button class="faq-question"> How can I contact Project Loci for more information?</button>
+                    <div class="faq-answer">
+                        <p>You can reach out via our website’s contact form.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question"> What if I need to cancel or reschedule a session?</button>
+                    <div class="faq-answer">
+                        <p>Please notify us at least 24 hours in advance to reschedule or cancel a session.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================================ -->
+    <!--                   Footer                     -->
+    <!-- ============================================ -->
+
+    <footer id="footer">
+        <div class="container">
+            <div class="left-section">
+                <a class="logo" href="/index.html"><img loading="lazy" decoding="async" src="/images/whitelogo.PNG" alt="logo" width="264" height="78"></a>
+                <p>
+                    Effective Tutoring For Retention Driven Learning
+                </p>
+            </div>
+            <div class="right-section">
+                <div class="lists">
+                    <ul>
+                        <li><h2>Information</h2></li>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/projects.html">FAQ</a></li>
+                        <li><a href="/contact.html">Contact Us</a></li>
+                    </ul>
+                    <ul>
+                        <li><h2>Why Choose Us</h2></li>
+                        <li>Accessible Tutoring</li>
+                        <li>Proven Memory Techniques</li>
+                        <li>Personalized Learning</li>
+                        <li>Expert Tutors</li>
+                    </ul>
+                    <ul>
+                        <li><h2>Contact</h2></li>
+                        <li><a href="tel:(647) 917-9237">T: (647) 917-9237</a></li>
+                        <li><a href="mailto:projectloci1@gmail.com">projectloci1@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="credit">
+            <a href="" target="_blank" rel="noopener"></a>
+            <span class="copyright"> Project Loci Copyright 2021 - Present</span></div>
+    </footer>
+
+    <script defer src="/nav.js"></script>
+    <script defer src="/dark.js"></script>
+    <!--
+        This script adds a class to the body after scrolling 100px
+        and we used these body.scroll styles to create some on scroll 
+        animations with the navbar
+    -->
+    <script defer>
+        document.addEventListener('scroll', (e) => { 
+            const scroll = document.documentElement.scrollTop;
+            if(scroll >= 100){
+        document.querySelector('body').classList.add('scroll')
+            } else {
+            document.querySelector('body').classList.remove('scroll')
+            }
+        });
+    </script>
+    <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                faqItem.classList.toggle('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
