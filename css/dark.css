@@ -19,7 +19,7 @@
   body.dark-mode h4,
   body.dark-mode h5,
   body.dark-mode h6 {
-    color: #fff;
+    color: #b4b2b2;
   }
   body.dark-mode .light {
     display: none;
@@ -119,4 +119,21 @@ body.dark-mode #navigation .logo img {
 
 body.dark-mode #navigation #navbar-menu ul li a:hover {
     color: var(--primaryShade); /* Optional: Add hover effect with a lighter purple */
+}
+
+/* Force FAQ text visible in dark mode */
+body.dark-mode .faq *,
+body.dark-mode .faq,
+body.dark-mode .faq-question,
+body.dark-mode .faq-answer,
+body.dark-mode .faq-drop,
+body.dark-mode .drop,
+body.dark-mode .drop-question,
+body.dark-mode .drop-answer,
+body.dark-mode .accordion,
+body.dark-mode .accordion *,
+body.dark-mode .accordion-item,
+body.dark-mode .accordion-title,
+body.dark-mode .accordion-content {
+    color: #060606 !important;
 }
