@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Swap our for actual link-->
+    <link rel="canonical" href="https://www.ProjectLoci.ca/aboutus">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!--Social Media Display-->
+    <meta property="og:title" content=""/>
+    <meta property="og:description" content=""/>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content=""/>
+    <meta property="og:image" content="/images/social.jpg"/>
+    <meta property="og:image:secure_url" content="/images/social.jpg"/>
+
+    <!--Favicons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/slogo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/slogo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/slogo.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Preload -->
+    <link rel="preload" as="image" href="/images/PLBG2.JPEG">
+    <link rel="preload" as="font" type="font/woff2" href="fonts/roboto-v29-latin-regular.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="fonts/roboto-v29-latin-700.woff2" crossorigin>
+
+    <link rel="stylesheet" href="/css/root.css">
+    <link rel="stylesheet" href="/css/about.css">
+    <link rel="stylesheet" href="/css/dark.css">
+
+    <!--Put analytics tag here at the bottom to prevent it from render blocking-->
+
+    <title>ProjectLoci | About Us | Town and State</title>
+</head>
+<body>
+    <!--Screen reader skip main nav-->
+    <a class="skip" aria-label="skip to main content" href="#main">Click To Skip To Main Content</a>
+
+    <!-- ============================================ -->
+    <!--                 Navigation                   -->
+    <!-- ============================================ -->
+
+    <div id="navigation">
+        <div aria-hidden="true" class="background-color-div">
+            <!--This div is used to overcome a z-index issue where the open
+                #navbar-menu is on top of the #navigation. This bar places itself 
+                the #navbar-menu so that menu appears behind the #navigation
+            -->
+        </div>
+        <div class="container">
+            <!--Logo - Get SVGs if you can.  I use fiverr to get png's turned into SVGs. Highly recommend it, worth the $20 - get a light and dark version-->
+            <a class="logo" aria-label="click to go to home page" href="/index.html">
+                <!--Light Colored Logo, remove .dark image tag and the .light class if you don't have a dark and light version -->
+                <img class="light" aria-hidden="true" src="/images/PLlogo.png" decoding="async" alt="logo" width="221" height="66">
+
+                <!--Dark Colored Logo-->
+                <img class="dark" aria-hidden="true" src="/images/PLlogo.png" decoding="async" loading="lazy" alt="logo" width="221" height="66">
+            </a>
+
+            <!--Main Nav-->
+            <nav id="navbar-menu">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a class="active" href="/services.html">Services</a></li>
+                    <li><a href="/faq.html">FAQ</a></li>
+                    <li><a href="/contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <!--Dark Mode toggle-->
+            <button id="dark-mode-toggle">
+                <!--Moon is an inline SVG so you can edit the color if needed-->
+                <svg class="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
+                <img class="sun" aria-hidden="true" src="/images/sun.svg" decoding="async" alt="moon" width="15" height="15">
+            </button>
+
+            <!--Mobile Nav toggle-->
+            <button class="hamburger-menu">
+                <span aria-hidden="true"></span>
+            </button>
+        </div>
+    </div>
+
+    <main id="main">
+
+    <section id="int-hero">
+        <h1 id="home-h">Our Solutions</h1>
+        <picture>
+            <source media="(max-width: 800px)" srcset="/images/solutionbg.png">
+            <source media="(min-width: 801px)" srcset="/images/solutionbg.png">
+            <img aria-hidden="true" decoding="async" src="/images/solutionbg.png" alt="cabinets" width="700" height="900">
+        </picture>
+    </section>
+
+   <section id="sidebyside" class="sidebyside">
+    <div class="container">
+        <!-- Our Solutions text -->
+        <div class="content">
+            <h2 class="title">Our Solutions</h2>
+            <p>
+                We transform how organizations train their teams by combining three core pillars.
+            </p>
+            <ul>
+                <li>
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="/images/check.svg" alt="check mark" width="20" height="20">
+                    <span><b>Digital Twin Scanning:</b> We create high-fidelity 3D digital replicas of any physical environment. These digital twins serve as the foundation for our immersive training platforms.</span>
+                </li>
+                <li>
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="/images/check.svg" alt="check mark" width="20" height="20">
+                    <span><b>Immersive MoL Training:</b> We build customized training programs within the digital twin. By applying the Method of Loci, we turn complex information into memorable visual stories, leveraging spatial memory to improve long-term retention.</span>
+                </li>
+                <li>
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="/images/check.svg" alt="check mark" width="20" height="20">
+                    <span><b>Educational Content & Resources:</b> We provide a blog and knowledge hub that offers valuable insights into memory science, digital twin technology, and practical learning tutorials.</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Video for Our Solutions -->
+  <div class="video-box">
+    <video controls autoplay muted loop>
+        <source src="/videos/povex1.mp4.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+    </div>
+
+    <div class="container reverse">
+        <!-- Image for Benefits -->
+        <div class="image-box">
+            <img src="/images/benefits.png" alt="Benefits Illustration" width="800" height="1200">
+        </div>
+
+        <!-- Benefits text -->
+        <div class="content">
+            <h2 class="title">Benefits of Our Immersive Training</h2>
+            <p>
+                Our training solutions are designed to deliver clear, measurable results for your organization.
+            </p>
+            <ul>
+                <li>
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="/images/check.svg" alt="check mark" width="20" height="20">
+                    <span><b>Onboard Faster:</b> Decrease the time it takes for new hires to achieve proficiency.</span>
+                </li>
+                <li>
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="/images/check.svg" alt="check mark" width="20" height="20">
+                    <span><b>Spend Less:</b> Reduce the need for expensive and time-consuming classroom and shadowing hours.</span>
+                </li>
+                <li>
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="/images/check.svg" alt="check mark" width="20" height="20">
+                    <span><b>Improve Safety & Operations:</b> Decrease location or search errors and boost confidence during high-pressure situations.</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<section id="sidebyside" class="sidebyside">
+    <div class="container">
+        <div class="video-container">
+            <video class="image-box" controls autoplay muted loop>
+                <source src="/videos/mnex.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="content">
+            <h2 class="title">Our Method in Action</h2>
+            <h3>Example: Spatial Summation</h3>
+            <p>
+                We show you how to transform complex topics into unforgettable visual stories. This process is grounded in a deep understanding of memory science and learning theory.
+                Our platform is built on principles like Dual-Coding Theory, which suggests that information is better remembered when it's encoded in both visual and verbal forms. The best way to show this is with a video. This video illustrates spatial summation in action.
+            </p>
+            <ul>
+                <li>
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="/images/check.svg" alt="check mark" width="20" height="20">
+                    <span><b>The Challenge:</b> Remembering complex terms and their contextual information.</span>
+                </li>
+                <li>
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="/images/check.svg" alt="check mark" width="20" height="20">
+                    <span><b>Our Solution:</b> We turn these abstract terms into characters and scenes inside a "memory palace."</span>
+                </li>
+                <li>
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="/images/check.svg" alt="check mark" width="20" height="20">
+                    <span><b>Watch how multiple concepts are visually combined into a single, memorable mnemonic.</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+
+    <section id="sidebyside" class="sidebyside reverse">
+    <div class="container">
+        <!-- Framework Image -->
+        <div class="image-box">
+            <img src="/images/framework.png" alt="Integrative Framework Overview" width="800" height="1200">
+        </div>
+
+        <!-- Framework Text -->
+        <div class="content">
+            <h2 class="title">Our Integrative Framework</h2>
+            <p>
+                We apply a comprehensive framework to every project. This structured approach ensures our solutions are effective, measurable, and scalable.
+            </p>
+            <p>
+                Our framework is based on four key pillars:
+            </p>
+            <ul>
+                <li>
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="/images/check.svg" alt="check mark" width="20" height="20">
+                    <span><b>Familiarization of three levels:</b> Guiding users through a space from a macro (overall layout), normal (sections/departments), and micro (tools and controls) perspective.</span>
+                </li>
+                <li>
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="/images/check.svg" alt="check mark" width="20" height="20">
+                    <span><b>Pathway Runs/Training:</b> Utilizing "ghost" runs and active runs with variability drills to lock in memory.</span>
+                </li>
+                <li>
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="/images/check.svg" alt="check mark" width="20" height="20">
+                    <span><b>Advanced User Analytics:</b> Integrating features to monitor and analyze user interactions, providing insights to optimize memory retention and spatial learning.</span>
+                </li>
+                <li>
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="/images/check.svg" alt="check mark" width="20" height="20">
+                    <span><b>Data Feedback:</b> Logging every attempt to provide continuous improvement and ROI tracking.</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+    <section id="sidebyside" class="sidebyside">
+    <div class="container">
+        <!-- Macro Level Image -->
+        <div class="image-box">
+            <img src="/images/Group 186.png" alt="Macro Level Overview" width="800" height="1200">
+        </div>
+
+        <!-- Macro Level Text -->
+        <div class="content">
+            <h2 class="title">Familiarization: Macro Level</h2>
+            <p>
+                We start with a bird's-eye view of the entire facility. This helps learners orient themselves and understand the relationship between different departments, such as labs, packaging areas, and storage. Mnemonic characters are placed to help users instantly associate key information with a specific location.
+            </p>
+            <p>
+                By visualizing the space from above, learners can form a mental map of the facility before exploring the details of each section. This macro-level overview allows for better spatial memory, faster orientation, and improved navigation when engaging with real-world or simulated tasks.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="sidebyside" class="sidebyside reverse">
+    <div class="container">
+        <!-- Normal Level Image -->
+        <div class="image-box">
+            <img src="/images/medialex.png" alt="Normal Level Overview" width="800" height="1200">
+        </div>
+
+        <!-- Normal Level Text -->
+        <div class="content">
+            <h2 class="title">Familiarization: Normal Level</h2>
+            <p>
+                Next, we guide users through the space at eye level. By placing our mnemonic characters and visual cues within the digital twin, we create a memorable narrative that turns a complex physical space into a "memory palace," making it easy to recall processes and pathways.
+            </p>
+            <p>
+                At this level, learners focus on the layout of each department, the positioning of equipment, and key interactions within the workspace. Using spatial storytelling, we anchor important procedures and safety steps in a visual context, making them easier to retrieve under pressure.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="sidebyside" class="sidebyside">
+    <div class="container">
+        <!-- Micro Level Image -->
+        <div class="image-box">
+            <img src="/images/microex.png" alt="Micro Level Overview" width="800" height="1200">
+        </div>
+
+        <!-- Micro Level Text -->
+        <div class="content">
+            <h2 class="title">Familiarization: Micro Level</h2>
+            <p>
+                Finally, our mnemonics work at the most granular level. We focus on specific tools and controls, turning them into memorable characters. This helps users master the details critical for safety and operational efficiency, ensuring that even the smallest steps are retained for long-term recall.
+            </p>
+            <p>
+                Micro-level familiarization enables learners to understand and remember sequences of operations, the function of individual instruments, and subtle procedural differences. By embedding these details into a visual-spatial framework, the platform enhances precision, reduces errors, and accelerates skill mastery.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+<section id="cta">
+        <div class="container">
+            <h2 class="title">Ready to Transform Your Training?</h2>
+            <p>
+                Contact us and see how our solutions can help your organization succeed.
+            </p>
+            <a href="/contact.html" class="button-solid">Get Started</a>
+        </div>
+        <picture>
+            <source media="(max-width: 600px)" srcset="/images/Lbackground.jpg">
+            <source media="(min-width: 601px)" srcset="/images/Lbackground.jpg">
+            <img aria-hidden="true" loading="lazy" decoding="async" src="/images/Lbackground.jpg" alt="kitchen cabinets" width="1920" height="1280">
+        </picture>
+    </section>
+
+
+</main>
+    
+    </body>
+
+    <!-- ============================================ -->
+    <!--                   Footer                     -->
+    <!-- ============================================ -->
+
+        <footer id="footer">
+        <div class="container">
+            <div class="left-section">
+                <a class="logo" href="/index.html"><img loading="lazy" decoding="async" src="/images/whitelogo.PNG" alt="logo" width="264" height="78"></a>
+                <p>
+                    Spatial training that sticks in minutes, not months.
+                </p>
+            </div>
+            <div class="right-section">
+                <div class="lists">
+                    <ul>
+                        <li><h2>Information</h2></li>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/services.html">Services</a></li>
+                        <li><a href="/faq.html">FAQ</a></li>
+                        <li><a href="/contact.html">Contact Us</a></li>
+                    </ul>
+                    <ul>
+                        <li><h2>What We Offer</h2></li>
+                        <li>Immersive MoL Training</li>
+                        <li>Digital Twin Scanning</li>
+                        <li>Educational Content & Resources</li>
+                    </ul>
+                    <ul>
+                        <li><h2>Contact</h2></li>
+                        <li><a href="mailto:projectloci1@gmail.com">projectloci1@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="credit">
+            <a href="" target="_blank" rel="noopener"></a>
+            <span class="copyright"> Project Loci Copyright 2021 - Present</span></div>
+    </footer>
+
+
+
+    <script defer src="/nav.js"></script>
+    <script defer src="/dark.js"></script>
+    <!--
+        This script adds a class to the body after scrolling 100px
+        and we used these body.scroll styles to create some on scroll 
+        animations with the navbar
+    -->
+    <script defer>
+        document.addEventListener('scroll', (e) => { 
+            const scroll = document.documentElement.scrollTop;
+            if(scroll >= 100){
+        document.querySelector('body').classList.add('scroll')
+            } else {
+            document.querySelector('body').classList.remove('scroll')
+            }
+        });
+    </script>
+
+</body>
+</html>

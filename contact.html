@@ -5,17 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--Swap our for actual link-->
     <link rel="canonical" href="https://www.projectloci.ca/contactus">
 
     <meta name="description" content="">
     <meta name="keywords" content="">
 
     <!--Social Media Display-->
-    <meta property="og:title" content=""/>
-    <meta property="og:description" content=""/>
+    <meta property="og:title" content="Project Loci | Contact Us"/>
+    <meta property="og:description" content="Reach out to Project Loci for tutoring inquiries or questions."/>
     <meta property="og:type" content="website" />
-    <meta property="og:url" content=""/>
+    <meta property="og:url" content="https://www.projectloci.ca/contactus"/>
     <meta property="og:image" content="/images/social.jpg"/>
     <meta property="og:image:secure_url" content="/images/social.jpg"/>
 
@@ -37,164 +36,108 @@
     <link rel="stylesheet" href="/css/contact.css">
     <link rel="stylesheet" href="/css/dark.css">
 
-    <!--Put analytics tag here at the bottom to prevent it from render blocking-->
-
     <title>Project Loci | Contact Us | Town and State</title>
 </head>
 <body>
-    <!--Screen reader skip main nav-->
     <a class="skip" aria-label="skip to main content" href="#main">Click To Skip To Main Content</a>
 
-    <!-- ============================================ -->
-    <!--                 Navigation                   -->
-    <!-- ============================================ -->
-
     <div id="navigation">
-        <div aria-hidden="true" class="background-color-div">
-            <!--This div is used to overcome a z-index issue where the open
-                #navbar-menu is on top of the #navigation. This bar places itself 
-                the #navbar-menu so that menu appears behind the #navigation
-            -->
-        </div>
+        <div aria-hidden="true" class="background-color-div"></div>
         <div class="container">
-            <!--Logo - Get SVGs if you can.  I use fiverr to get png's turned into SVGs. Highly recommend it, worth the $20 - get a light and dark version-->
             <a class="logo" aria-label="click to go to home page" href="/index.html">
-                <!--Light Colored Logo, remove .dark image tag and the .light class if you don't have a dark and light version -->
                 <img class="light" aria-hidden="true" src="/images/PLlogo.png" decoding="async" alt="logo" width="221" height="66">
-
-                <!--Dark Colored Logo-->
                 <img class="dark" aria-hidden="true" src="/images/PLlogo.png" decoding="async" loading="lazy" alt="logo" width="221" height="66">
             </a>
-
-            <!--Main Nav-->
             <nav id="navbar-menu">
                 <ul>
-                    <li><a href="/index.html">Home</a></li>
+                    <li><a class="active" href="/index.html">Home</a></li>
                     <li><a href="/about.html">About Us</a></li>
-                    <li><a href="/projects.html">FAQ</a></li>
-                    <li><a class="active" href="/contact.html">Contact Us</a></li>
+                    <li><a href="/services.html">Services</a></li>
+                    <li><a href="/faq.html">FAQ</a></li>
+                    <li><a href="/contact.html">Contact Us</a></li>
                 </ul>
             </nav>
-
-            <!--Dark Mode toggle-->
             <button id="dark-mode-toggle">
-                <!--Moon is an inline SVG so you can edit the color if needed-->
                 <svg class="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
                 <img class="sun" aria-hidden="true" src="/images/sun.svg" decoding="async" alt="moon" width="15" height="15">
             </button>
-
-            <!--Mobile Nav toggle-->
-            <button class="hamburger-menu">
-                <span aria-hidden="true"></span>
-            </button>
+            <button class="hamburger-menu"><span aria-hidden="true"></span></button>
         </div>
     </div>
 
     <main id="main">
-
-        <!-- ============================================ -->
-        <!--                    LANDING                   -->
-        <!-- ============================================ -->
-    
+        <!-- Hero -->
         <section id="int-hero">
             <h1 id="home-h">Contact Us</h1>
             <picture>
-                <source media="(max-width: 600px)" srcset="/images/PlBG.jpg">
-                <source media="(min-width: 601px)" srcset="/images/PlBG.jpg">
-                <img aria-hidden="true" loading="lazy" decoding="async" src="/images/PlBG.jpg" alt="" width="400" height="662">
+                <source media="(max-width: 600px)" srcset="/images/contactbg.png">
+                <source media="(min-width: 601px)" srcset="/images/contactbg.png">
+                <img aria-hidden="true" loading="lazy" decoding="async" src="/images/contactbg.png" alt="" width="400" height="662">
             </picture>
         </section>
 
-        <!-- ============================================ -->
-        <!--                    FORM                      -->
-        <!-- ============================================ -->
-
+        <!-- Contact & Calendly Section -->
         <section id="form">
             <div class="left-section">
                 <h2 class="title">Send a Message</h2>
-                <p>Whether you're a student looking for tutoring or a parent interested in how Project Loci works, we're here to help!</p>
-                <p>If you have any questions or concerns please feel free to reach out to us.</p>
+                <p>Interested in Project Loci or want to know more? We’d love to hear from you!</p>
                 <form id="contact" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
                     <input type="hidden" name="form-name" value="contact">
                     <input type="hidden" name="bot-field">
                     
                     <div class="input-group">
                         <label for="name">Full Name</label>
-                        <input id="name" aria-label="name" class="input1" name="name" placeholder="Full Name" type="text" tabindex="1" required>
+                        <input id="name" class="input1" name="name" placeholder="Full Name" type="text" tabindex="1" required>
                         <div aria-hidden="true" class="hover-box"></div>
                     </div>
-                
                     <div class="input-group">
                         <label for="email">Email</label>
-                        <input id="email" aria-label="email" class="input1 right" name="email" placeholder="Email Address" type="email" tabindex="2" required>
+                        <input id="email" class="input1 right" name="email" placeholder="Email Address" type="email" tabindex="2" required>
                         <div aria-hidden="true" class="hover-box"></div>
                     </div>
-                
                     <div class="input-group">
                         <label for="phone">Phone</label>
-                        <input id="phone" aria-label="phone number" class="input1" name="phone" placeholder="Phone Number" type="tel" tabindex="3" required>
+                        <input id="phone" class="input1" name="phone" placeholder="Phone Number" type="tel" tabindex="3" required>
                         <div aria-hidden="true" class="hover-box"></div>
                     </div>
-                
                     <div class="input-group">
                         <label for="location">Location</label>
-                        <input id="location" aria-label="location" class="input1 right" name="location" placeholder="Your Location" type="text" tabindex="4" required>
+                        <input id="location" class="input1 right" name="location" placeholder="Your Location" type="text" tabindex="4" required>
                         <div aria-hidden="true" class="hover-box"></div>
                     </div>
-                
                     <div class="input-group">
-                        <label for="how">How did you hear about us</label>
-                        <input id="how" aria-label="how did you hear about us" name="hear" placeholder="How Did You Hear About Us" type="text" tabindex="5" required>
+                        <label for="how">How did you hear about us?</label>
+                        <input id="how" name="hear" placeholder="How Did You Hear About Us" type="text" tabindex="5" required>
                         <div aria-hidden="true" class="hover-box"></div>
                     </div>
-                
                     <div class="input-group textarea">
                         <label for="message">Message</label>
-                        <textarea id="message" aria-label="write your message" name="message" placeholder="Tell us about what you need help with" tabindex="6" required></textarea>
+                        <textarea id="message" name="message" placeholder="Message" tabindex="6" required></textarea>
                         <div aria-hidden="true" class="hover-box"></div>
                     </div>
-                
                     <p class="form-submit">
-                        <button name="submit" type="submit" id="contact-submit" class="button-solid" data-submit="...Sending">Submit</button>
+                        <button name="submit" type="submit" id="contact-submit" class="button-solid">Submit</button>
                     </p>
                 </form>
             </div>
-            <div class="contact-right">
-                <div class="info-group">
-                    <span class="heading">Contact Us</span>
-                    <span class="info"></span>
-                </div>
-                <div class="info-group">
-                    <span class="heading">Phone</span>
-                    <a class="info" href="tel:(647) 917-9237">(647) 917-9237</a>
-                </div>
-                <div class="info-group">
-                    <span class="heading">Email</span>
-                    <a class="info" href="mailto:Projectloci1@gmail.com">Projectloci1@gmail.com</a>
-                </div>
+
+            <!-- Right section: Calendly widget -->
+            <div class="right-section">
+                <h2 class="title">Schedule a Session</h2>
+                <p>Choose a time and connect with our team directly!</p>
+                <div class="calendly-inline-widget" data-url="https://calendly.com/projectloci1/30min" style="min-width:475px;height:850px;"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
             </div>
         </section>
-
     </main>
 
-    <!-- Netlify form fallback -->
-<form name="contact" netlify netlify-honeypot="bot-field" hidden>
-    <input type="text" name="name" />
-    <input type="email" name="email" />
-    <textarea name="message"></textarea>
-  </form>
-  
-
-    <!-- ============================================ -->
-    <!--                     FOOTER                   -->
-    <!-- ============================================ -->
-
-    <footer id="footer">
+    <!-- Footer -->
+        <footer id="footer">
         <div class="container">
             <div class="left-section">
                 <a class="logo" href="/index.html"><img loading="lazy" decoding="async" src="/images/whitelogo.PNG" alt="logo" width="264" height="78"></a>
                 <p>
-                    Effective Tutoring For Retention Driven Learning
+                    Spatial training that sticks in minutes, not months.
                 </p>
             </div>
             <div class="right-section">
@@ -203,18 +146,18 @@
                         <li><h2>Information</h2></li>
                         <li><a href="/index.html">Home</a></li>
                         <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/services.html">Services</a></li>
                         <li><a href="/faq.html">FAQ</a></li>
                         <li><a href="/contact.html">Contact Us</a></li>
                     </ul>
                     <ul>
-                        <li><h2>Why Choose Us</h2></li>
-                        <li>Accessible Tutoring</li>
-                        <li>Proven Memory Techniques</li>
-                        <li>Personalized Learning</li>
+                        <li><h2>What We Offer</h2></li>
+                        <li>Immersive MoL Training</li>
+                        <li>Digital Twin Scanning</li>
+                        <li>Educational Content & Resources</li>
                     </ul>
                     <ul>
                         <li><h2>Contact</h2></li>
-                        <li><a href="tel:(647) 917-9237">T: (647) 917-9237</a></li>
                         <li><a href="mailto:projectloci1@gmail.com">projectloci1@gmail.com</li>
                     </ul>
                 </div>
@@ -226,23 +169,19 @@
             <span class="copyright"> Project Loci Copyright 2021 - Present</span></div>
     </footer>
 
+
+
     <script defer src="/nav.js"></script>
     <script defer src="/dark.js"></script>
-    <!--
-        This script adds a class to the body after scrolling 100px
-        and we used these body.scroll styles to create some on scroll 
-        animations with the navbar
-    -->
     <script defer>
-        document.addEventListener('scroll', (e) => { 
+        document.addEventListener('scroll', () => { 
             const scroll = document.documentElement.scrollTop;
             if(scroll >= 100){
-        document.querySelector('body').classList.add('scroll')
+                document.querySelector('body').classList.add('scroll')
             } else {
-            document.querySelector('body').classList.remove('scroll')
+                document.querySelector('body').classList.remove('scroll')
             }
         });
     </script>
-
 </body>
 </html>

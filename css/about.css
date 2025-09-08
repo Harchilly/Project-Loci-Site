@@ -1,30 +1,20 @@
 /*-- -------------------------- -->
 <---       Side By Side         -->
 <--- -------------------------- -*/
-/* Mobile */
+
+/* Mobile (default stacked layout) */
 @media only screen and (min-width: 0em) {
   #sidebyside {
     padding: 50px 0;
   }
   #sidebyside .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   #sidebyside .content {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    order: 2;
     margin: auto;
     margin-top: 4.6875em;
     max-width: 38.1875em;
@@ -42,77 +32,34 @@
   }
   #sidebyside .content ul li {
     list-style: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
   #sidebyside .content ul li img {
     margin-right: 0.625em;
     margin-top: 0.22222222em;
   }
-  #sidebyside .content .button-solid {
-    margin-top: 1.78571429em;
-  }
   #sidebyside .image-box {
     display: block;
     position: relative;
     margin: auto;
-    width: 38.1875em;
-    height: 53.8125em;
-    font-size: min(1.4vw, 1em);
-  }
-  #sidebyside .image-box:before {
-    content: '';
-    position: absolute;
-    display: block;
-    height: 100%;
-    width: 100%;
-    background: var(--primary);
-    opacity: 1;
-    top: 2.5em;
-    left: -2.5em;
-  }
-  #sidebyside .image-box:after {
-    content: '';
-    position: absolute;
-    display: block;
-    height: 32.25em;
-    width: 28.75em;
-    background: url("/images/content-circles.svg");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 1;
-    top: -14.125em;
-    right: -6.8125em;
-    z-index: -1;
+    width: 90%;
+    max-width: 400px;
+    height: auto;
   }
   #sidebyside .image-box img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
     width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
   }
 }
-/* Inbetween */
-@media only screen and (min-width: 666px) {
+
+/* Tablet & up (side-by-side) */
+@media only screen and (min-width: 768px) {
   #sidebyside {
-    padding: 6.25em 0;
-  }
-}
-/* Small Desktop */
-@media only screen and (min-width: 1300px) {
-  #sidebyside {
-    padding: 6em 0; /* Reduced padding */
+    padding: 6em 0;
   }
   #sidebyside .container {
     max-width: 86.9375em;
@@ -121,6 +68,9 @@
     justify-content: space-between;
     align-items: flex-start;
     gap: 4em;
+  }
+  #sidebyside.reverse .container {
+    flex-direction: row-reverse;
   }
   #sidebyside .content {
     margin: 0;
@@ -131,72 +81,11 @@
     margin: 0;
     width: 35%;
     height: auto;
-    position: relative;
     order: 2;
-    display: block; /* Ensure image box is visible */
-  }
-  #sidebyside .image-box:before,
-  #sidebyside .image-box:after {
-    display: none; /* Remove decorative elements */
-  }
-  #sidebyside .image-box img {
-    position: relative;
-    display: block;
-    width: 100%;
-    height: auto;
-    max-height: 400px; /* Control maximum height */
-    object-fit: cover;
-    border-radius: 8px;
-  }
-}
-/* Adjust mobile view if needed */
-@media only screen and (max-width: 1299px) {
-  #sidebyside .image-box {
-    width: 90%;
-    max-width: 400px;
-    height: auto;
-    margin: 2em auto;
     display: block;
   }
-  #sidebyside .image-box img {
-    position: relative;
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    display: block;
-  }
-}
-/* Style for the "Contact us for more Information" button */
-#sidebyside .button-solid {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    background-color: var(--primary);
-    border-radius: 8px;
-    padding: 12px 24px;
-    text-decoration: none;
-    border: none;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 1;
-    cursor: pointer;
-    transition: all 0.3s ease;
 }
 
-#sidebyside .button-solid:hover {
-    background-color: var(--primaryShade);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-/* Remove ALL possible spacing issues */
-#sidebyside .button-solid:before,
-#sidebyside .button-solid:after,
-#sidebyside .button-solid *:before,
-#sidebyside .button-solid *:after {
-    display: none !important;
-}
 /*-- -------------------------- -->
 <---    Final Call To Action    -->
 <--- -------------------------- -*/
@@ -317,4 +206,70 @@
   body.dark-mode #cta:after {
     display: none;
   }
+}
+.image-box {
+    width: 100%;       /* fill the container width */
+    height: auto;      /* keep aspect ratio */
+    max-width: 800px;  /* optional: limit max width */
+    border-radius: 10px; /* optional styling */
+}
+
+/* Make video/image fill more space in side-by-side sections */
+#sidebyside .image-box {
+    width: 60% !important;   /* increase from 35% to 60% on desktop */
+    max-width: none !important; /* remove old max-width */
+    height: auto;
+}
+
+/* Optional: on mobile, allow it to use more width */
+@media only screen and (max-width: 767px) {
+    #sidebyside .image-box {
+        width: 95% !important;
+        max-width: none !important;
+    }
+}
+
+/* Ensure video fits nicely */
+.image-box video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+/* Desktop: side-by-side layout */
+@media only screen and (min-width: 768px) {
+    #sidebyside .container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    /* Our Solutions video on the right */
+    #sidebyside .video-box {
+        width: 60%;   /* bigger video */
+    }
+
+    #sidebyside .video-box video {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    /* Text width adjusted accordingly */
+    #sidebyside .content {
+        width: 40%;
+    }
+
+    /* Benefits section (image left, text right) */
+    #sidebyside .container.reverse .image-box {
+        width: 40%;
+    }
+    #sidebyside .container.reverse .content {
+        width: 55%;
+    }
+
+   #sidebyside .image-box img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
 }
