@@ -366,3 +366,17 @@
     height: 100% !important;
   }
 }
+/* Mobile: stack sections and center Calendly */
+@media only screen and (max-width: 1023px) {
+  #form .right-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* centers content horizontally */
+    justify-content: center;
+    margin: 2em 0;        /* optional spacing from other content */
+  }
+
+  #form .right-section .calendly-inline-widget {
+    max-width: 100%;      /* ensures it doesn’t overflow */
+  }
+}
