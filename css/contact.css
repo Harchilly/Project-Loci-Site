@@ -344,3 +344,15 @@
         font-size: 0.9em; /* mobile size */
     }
 }
+
+/* Mobile: Calendly section centering */
+@media only screen and (max-width: 1023px) {
+    #calendly-section,
+    #calendly-section .calendly-inline-widget {
+        display: block;
+        width: 100% !important;      /* full width on mobile */
+        max-width: 400px;            /* optional max-width */
+        margin: 0 auto;              /* center horizontally */
+        text-align: center;          /* for any inner content */
+    }
+}
