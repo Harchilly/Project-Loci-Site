@@ -273,3 +273,19 @@
         border-radius: 10px;
     }
 }
+
+/* Mobile: make video-box fill width nicely */
+@media only screen and (max-width: 767px) {
+    #sidebyside .video-box {
+        width: 95%;
+        max-width: none;
+        margin: auto;
+    }
+
+    #sidebyside .video-box video {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        display: block;
+    }
+}
