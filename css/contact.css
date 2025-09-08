@@ -345,14 +345,24 @@
     }
 }
 
-/* Mobile: Calendly section centering */
+/* Calendly section full mobile centering */
 @media only screen and (max-width: 1023px) {
-    #calendly-section,
-    #calendly-section .calendly-inline-widget {
-        display: block;
-        width: 100% !important;      /* full width on mobile */
-        max-width: 400px;            /* optional max-width */
-        margin: 0 auto;              /* center horizontally */
-        text-align: center;          /* for any inner content */
-    }
+  #calendly-section {
+    display: flex;
+    justify-content: center;  /* horizontal centering */
+    align-items: center;      /* vertical centering if needed */
+    padding: 1em;             /* optional spacing */
+  }
+
+  #calendly-section .calendly-inline-widget {
+    width: 100% !important;   /* take full width */
+    max-width: 400px;         /* optional max width */
+    height: 650px;            /* set height as needed */
+  }
+
+  /* Ensure iframe inside widget also fits */
+  #calendly-section iframe {
+    width: 100% !important;
+    height: 100% !important;
+  }
 }
