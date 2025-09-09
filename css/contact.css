@@ -383,7 +383,7 @@
 /* Mobile: scale down Calendly widget slightly */
 @media only screen and (max-width: 767px) {
     .calendly-inline-widget {
-        transform: scale(0.75);
+        transform: scale(0.80);
         transform-origin: top center; /* keep it centered */
         width: 100% !important;
     }
