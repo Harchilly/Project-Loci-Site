@@ -924,3 +924,35 @@
 #sidebyside + #sidebyside-reverse {
   margin-top: -20px;   /* pulls them closer together */
 }
+
+/* --------------------------
+   Educational Page Fixes
+--------------------------- */
+
+/* CNS Mnemonic image: make smaller on desktop, keep responsive */
+#sidebyside .image-box img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* center horizontally */
+}
+
+/* Spatial Summation video: center in its container */
+#sidebyside .video-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sidebyside .video-box video {
+    max-width: 100%;
+    height: auto;
+}
+/* CNS Mnemonic image: limit size on desktop */
+@media (min-width: 1025px) {
+    #sidebyside .image-box img[alt="CNS Mnemonic"] {
+        max-width: 500px; /* adjust as needed */
+        height: auto;
+        margin: 0 auto; /* center */
+    }
+}
