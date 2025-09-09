@@ -912,3 +912,14 @@
   }
 }
 
+/* Reduce space between stacked sections */
+#sidebyside,
+#sidebyside-reverse {
+  padding-top: 40px;   /* adjust to taste */
+  padding-bottom: 40px;
+  margin-bottom: 0;    /* kill any big gaps */
+}
+
+#sidebyside + #sidebyside-reverse {
+  margin-top: -20px;   /* pulls them closer together */
+}
