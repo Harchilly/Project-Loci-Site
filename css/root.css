@@ -956,3 +956,19 @@
         margin: 0 auto; /* center */
     }
 }
+
+.video-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.video-box video {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 80vh; /* keeps it on screen */
+  object-fit: contain;
+  aspect-ratio: 9 / 16; /* force vertical */
+}
