@@ -345,11 +345,12 @@
     right: 0;
     z-index: -1;
   }
-  #navigation #navbar-menu.open {
-    height: 19.125em;
+#navigation #navbar-menu.open {
+    height: auto;      /* Automatically fits content */
     padding-top: 1.25em;
     z-index: -100;
-  }
+}
+
   #navigation #navbar-menu.open ul li {
     opacity: 1;
     -webkit-transform: translateY(0) rotateX(0);
